@@ -38,9 +38,12 @@ function getPlaylistLength(playlist) {
 // getHardestHomework([])
 // Return the lowest graded key for assignments
 function getHardestHomework(homework) {
+    // set escape clause
     if (homework.length === 0) {
         return ''
     }
+
+    // Determine lowest score
     let lowestScore = 100;
     for (let i = 0; i < homework.length; i++) {
         const tempSum = homework[i].averageScore;
@@ -48,21 +51,38 @@ function getHardestHomework(homework) {
             lowestScore = tempSum;
         }
 
-
-
     }
+
+    // return name key fo corresponding
     for (let i = 0; i < homework.length; i++) {
         const toughestWork = homework[i];
         if (toughestWork.averageScore === lowestScore) { return toughestWork.name }
 
     }
+
+    // set and return lowest score assignment
     if (homework.averageScore === lowestScore) {
         return homework.name;
 
     }
-    console.log(lowestScore)
 }
 
+// createPhonebook
+//Attach two items from two arrays
+// and make one phoneEntry object
+function createPhonebook(name, number) {
+    let phoneEntry;
+
+    for (let i = 0; i < phoneEntry.length; i++) {
+        const nameEntry = phoneEntry[i];
+        phoneEntry.name.Push(nameEntry)
+
+    }
+
+
+    console.log(phoneEntry)
+    return
+}
 
 
 // ┌─────────────────────────────────────┐
